@@ -1,0 +1,223 @@
+.repairs {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.repairs__title {
+  text-transform: uppercase;
+  height: 80px;
+  background-image: linear-gradient(
+    to right,
+    $repairs-title-lg 0%,
+    $repairs-title-lg1 70%
+  );
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  margin-bottom: 16px;
+  h2 {
+    font-size: 16px;
+    font-weight: normal;
+    color: $h2-color;
+  }
+}
+
+.repairs__container {
+  overflow: hidden;
+  padding-bottom: 30px;
+}
+
+.repairs__details {
+  display: none;
+  position: relative;
+  padding: 0 24px;
+  margin-top: 20px;
+  summary {
+    outline: none;
+    cursor: pointer;
+    display: block;
+    margin-top: -16px;
+    margin-bottom: 30px;
+    &:hover {
+      color: $repairs-summary-hover;
+      opacity: 0.7;
+    }
+    &::-webkit-details-marker {
+      display: none;
+    }
+    &::after {
+      top: 0px;
+      position: absolute;
+      left: 45px;
+      content: "Показать все";
+      font-weight: bold;
+      font-size: 16px;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background: url('./../img/arrows-down.png') no-repeat;
+      transition: 0.3s;
+    }
+  }
+}
+
+.repairs__details[open] {
+  summary {
+    &::after {
+      position: absolute;
+      content: "Скрыть";
+      font-weight: bold;
+      font-size: 16px;
+      left: 45px;
+      top: 180px;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      top: 176px;
+      left: 13px;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background: url('./../img/arrows-down.png') no-repeat;
+      -moz-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      -webkit-transform: rotate(180deg);
+      -o-transform: rotate(180deg);
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.repairs__details_wrapper {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 1em 2em;
+  .swiper-slide {
+    width: 240px;
+    height: 160px;
+    background-color: $repairs-item;
+    border-radius: 6px;
+    transition: 0.3s;
+    cursor: pointer;
+    &:hover {
+      img {
+        transform: rotate(90deg);
+        transition: 0.3s;
+      }
+    }
+  }
+}
+
+.repairs-wrapper {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-left: 16px;
+  .repairs-slide {
+    width: 240px;
+    height: 160px;
+    background-color: $repairs-item;
+    border-radius: 6px;
+    transition: 0.3s;
+    cursor: pointer;
+    &:hover {
+      img {
+        transform: rotate(90deg);
+        transition: 0.3s;
+      }
+    }
+  }
+}
+
+.slider-wrap {
+  margin: 20px;
+  position: relative;
+  height: 100%;
+  img {
+    position: absolute;
+    bottom: 35px;
+    right: 0;
+  }
+}
+
+.pag1 {
+  position: relative;
+  top: 20px;
+}
+
+@media (min-width: 593px) {
+  .repairs__title {
+    margin-top: 90px;
+  }
+  .repairs-wrapper {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+    margin-left: 0;
+    .swiper-slide {
+      width: 240px;
+    }
+  }
+  .hid-593px {
+    display: none;
+  }
+  .repairs__container {
+    padding: 0 24px;
+  }
+  .repairs__details {
+    display: block;
+  }
+  .repairs__details_wrapper {
+    gap: 1em;
+  }
+}
+
+@media (min-width: 768px) {
+  .repairs-wrapper {
+    width: 768px;
+    .swiper-slide {
+      width: 224px;
+    }
+  }
+  .repairs__details_wrapper {
+    .swiper-slide {
+      width: 224px;
+    }
+  }
+  .vis-768 {
+    display: block;
+  }
+  .repairs__title {
+    height: 56px;
+  }
+}
+
+@media (min-width: 1120px) {
+  .repairs__title {
+    height: 56px;
+  }
+  .vis-1120 {
+    display: block;
+  }
+  .repairs-wrapper {
+    gap: 1em 2em;
+    width: 100%;
+    .swiper-slide {
+      width: 240px;
+    }
+  }
+  .repairs__details_wrapper {
+    gap: 1em 2em;
+    .swiper-slide {
+      width: 240px;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.footer {
+    border-top: 1px solid $footer-border;
+    margin-top: 20px;
+    padding: 16px;
+    p {
+        text-transform: uppercase;
+        color: $footer-p-color;
+        font-size: 14px;
+        text-align: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        p {
+            text-align: left;
+            &:last-child {
+                width: 240px;
+                text-align: right;
+            }
+        }
+    }
+}
+
+@media (min-width: 1120px) {
+    .footer {
+        p {
+            &:last-child {
+                width: 310px;
+            }
+        }
+    }
+}

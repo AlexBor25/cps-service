@@ -1,0 +1,148 @@
+.phone {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    background: $phone-bg;
+    height: 100vh;
+    width: 440px;
+    box-shadow: -70px 0 100px 0px rgba(14, 24, 80, 0.2);
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 31px 10px 31px;
+    }
+}
+
+.show {
+    display: block;
+}
+
+.phone_close {
+    position: absolute;
+    width: 40px;
+    top: 25px;
+    left: -60px;
+    height: 40px;
+    border-radius: 50%;
+    background: $main-color url('./../img/close.png') no-repeat center center;
+    transition: .3s;
+    &:hover {
+        background-color: $main-hover;
+        cursor: pointer;
+    }
+}
+
+.phone__title {
+    h2 {
+        font-weight: bold;
+        font-size: 24px;
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+			top: -5px;
+			left: -33px;
+			height: 40px;
+			width: 4px;
+			background: $main-blue;
+            border-radius: 8px;
+        }
+    }
+}
+
+.phone__form {
+    display: flex;
+    flex-direction: column;
+    input  {
+        font-size: 16px;
+        padding: 11px 15px;
+        border-radius: 8px;
+        border: 1px solid $input-border;
+        outline: none;
+    }
+    input::-webkit-input-placeholder {
+        color: $input-color;
+    }
+    input::-moz-input-placeholder {
+        color: $input-color;
+    }
+    input::-ms-input-placeholder {
+        color: $input-color;
+    }
+    button {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+        background-color: $main-color;
+        border: none;
+        border-radius: 16px;
+        font-weight: bold;
+        font-size: 12px;
+        text-transform: uppercase;
+        color: $phone-btn-color;
+        cursor: pointer;
+        border: 2px solid transparent;
+        transition: .3s;
+        margin-left: auto;
+        margin-right: 0;
+        &:hover {
+            background-color: $main-hover;
+        }
+        img {
+            margin-left: 10px;
+        }
+    }
+}
+
+.phone__description {
+    font-size: 14px;       
+    a {
+        color: #FF3E79;
+    }
+}
+
+@media (max-width: 1120px) {
+    .phone {
+        width: 320px;
+    }
+    .phone__inner {
+        margin-top: 70px;
+    }
+    .phone_close {
+        position: absolute;
+        width: 40px;
+        top: 25px;
+        left: 16px;
+        height: 40px;
+        border-radius: 50%;
+        background: $main-color url('./../img/close.png') no-repeat center center;
+        transition: .3s;
+        &:hover {
+            background-color: $main-hover;
+            cursor: pointer;
+        }
+    }
+    .phone__inner {
+        padding: 16px;
+    }
+    .phone__title {
+        h2 {
+            font-weight: bold;
+            font-size: 24px;
+            position: relative;
+            &:before {
+                content: '';
+                position: absolute;
+                top: -5px;
+                left: -16px;
+                height: 40px;
+                width: 4px;
+                background: $main-blue;
+                border-radius: 8px;
+            }
+        }
+    }
+}

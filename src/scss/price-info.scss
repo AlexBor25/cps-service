@@ -1,0 +1,35 @@
+.price-info {
+  padding: 16px 50px 16px 16px;
+  color: $prefooter-color;
+  p {
+    font-size: 14px;
+  }
+  a {
+    color: $prefooter-color;
+    position: relative;
+    font-weight: bold;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 27px;
+      left: 110px;
+      width: 20px;
+      height: 20px;
+      background: url('./../img/little-right.png') no-repeat;
+    }
+  }
+}
+
+@media (min-width: 388px) {
+  .price-info {
+    a {
+      &:after {
+        top: 5px;
+        left: 310px;
+      }
+    }
+    p {
+      width: 430px;
+    }
+  }
+}

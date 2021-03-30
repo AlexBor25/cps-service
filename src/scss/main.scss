@@ -1,0 +1,575 @@
+@import "menu";
+@import "call";
+@import "phone";
+@import "brands";
+@import "repairs";
+@import "price";
+@import "price-info";
+@import "footer";
+
+html {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: $body-bg-color;
+	color: #1B1C21;
+  	font-family: 'TT Lakes';
+  	min-height: 100vh;
+}
+
+* {
+	-webkit-box-sizing: inherit;
+	box-sizing: inherit;
+	&::before {
+		-webkit-box-sizing: inherit;
+		box-sizing: inherit;
+	}
+	&::after {
+		-webkit-box-sizing: inherit;
+		box-sizing: inherit;
+	}
+	&:hover {
+		-webkit-box-sizing: inherit;
+		box-sizing: inherit;
+	}
+}
+.container {
+	min-width: 280px;
+	max-width: 1120px;
+	margin: 0 auto;
+	  position: relative;
+	  overflow: hidden;
+}
+.main-wrapper {
+	padding: 0 16px;
+}
+.header {
+	min-height: 88px;
+	background-color: $header-bg-color;
+	padding: 0 16px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+.blur {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: -100;
+}
+.nav {
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+.nav__menu {
+	background: $main-color url('./../img/logotype.svg') no-repeat center center;
+	position: relative;
+}
+.nav__left {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: start;
+	-ms-flex-pack: start;
+	justify-content: flex-start;
+}
+.nav__right {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: end;
+	-ms-flex-pack: end;
+	justify-content: flex-end;
+}
+.button {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: $main-color;
+	cursor: pointer;
+	border: none;
+	padding: 0;
+	transition: .3s;
+	&:hover {
+		background-color: $main-hover;
+	}
+}
+.logo {
+	position: relative;
+	&:after {
+		content: '';
+		position: absolute;
+		height: 32px;
+		width: 2px;
+		background-color: $universal-color;
+		top: 20%;
+		right: -16px;
+	}
+}
+.nav__equipment {
+	margin-right: 16px;
+	background: $main-color url('./../img/equip.png') no-repeat center center;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+.nav__call {
+	margin-right: 16px;
+	background: $main-color url('./../img/call.png') no-repeat center center;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+.nav__chat {
+	margin-right: 16px;
+	background: $main-color url('./../img/chat.png') no-repeat center center;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+.nav__profile {
+	margin-right: 32px;
+	background: $main-color url('./../img/profile.png') no-repeat center center;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+.nav__search {
+	background: $main-color url('./../img/search.png') no-repeat center center;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+.nav__media--768px {
+	display: none;
+}
+.info {
+	h1 {
+		position: relative;
+		&::before {
+			content: '';
+			position: absolute;
+			top: -5px;
+			left: -16px;
+			height: 40px;
+			width: 4px;
+			background: $main-blue;
+			border-radius: 8px;
+		}
+	}
+}
+.info__slider {
+	overflow: scroll;
+	overflow-y: hidden;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	font-size: 18px;
+	font-weight: medium;
+}
+.info__subtitle {
+	margin-top: 24px;
+	font-size: 14px;
+}
+.info__image {
+	display: block;
+	margin-left: -16px;
+}
+.info__flex {
+	.info__image {
+		width: 320px;
+		height: 190px;
+	}
+}
+.main-nav {
+	ul {
+		padding: 0;
+		display: flex;
+		flex-wrap: nowrap;
+		li {
+			display: inline-block;
+			list-style-type: none;
+			padding: 10px 20px;
+			cursor: pointer;
+			border: 2px solid transparent;
+			white-space: nowrap;
+			a {
+				text-decoration: none;
+				color: #7E7E82;
+				font-size: 16px;
+			}
+		}
+	}
+}
+.main-nav {
+  ul {
+    li {
+      &:hover {
+        border: 2px solid $main-nav-border;
+        border-radius: 6px;
+        background-color: $main-nav-bg;
+      }
+    }
+    li.active {
+      border: 2px solid $main-nav-border;
+      border-radius: 6px;
+      background-color: $main-nav-bg;
+    }
+  }
+}
+
+.main-details {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	position: relative;
+	summary {
+		margin-left: 10px;
+		border: none;
+		position: relative;
+		&::-webkit-details-marker {
+			display: none;
+		}
+		&::after {
+			content: "Читать далее";
+			font-weight: bold;
+			font-size: 16px;
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			top: 20%;
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			transition: .3s;
+		}
+		&:hover {
+			cursor: pointer;
+		}
+		span {
+			font-size: 16px;
+			font-weight: bold;
+		}
+	}
+}
+.main-details[open] {
+	summary {
+		&::after {
+			content: "Скрыть";
+			font-weight: bold;
+			font-size: 16px;
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			top: -30%;
+			left: -4%;
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			-moz-transform: rotate(180deg);
+			-ms-transform: rotate(180deg);
+			-webkit-transform: rotate(180deg);
+			-o-transform: rotate(180deg);
+			transform: rotate(180deg);
+		}
+	}
+}
+.info_show--block {
+	display: none;
+}
+
+@media (min-width: 320px) {
+	.main-details[open] {
+		summary {
+			position: absolute;
+			top: 50px; 
+			&:before {
+				left: -12%;
+			}
+			&::-webkit-details-marker {
+				display: none;
+			}
+		}
+	}
+	.main-details p {
+		margin-bottom: 50px;
+	}
+}
+
+@media (min-width: 572px) {
+	.main-details[open] {
+		summary {
+			position: absolute;
+			top: 30px; 
+			&:before {
+				left: -12%;
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.info__flex {
+		margin-top: 30px;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+		.info__image {
+			width: 360px;
+			height: 208px;
+		}
+	}
+	.info__subtitle {
+		margin-top: 0px;
+		max-width: 312px;
+		line-height: 20px;
+	}
+	.info_media--768px {
+		display: block;
+		span {
+			&:not(:last-child) {
+				display: block;
+			}
+			&:nth-child(2) {
+				margin-top: 25px;
+			}
+		}
+	}
+	.info_media--320px {
+		display: none;
+	}
+	.nav__equipment {
+		position: relative;
+		&:before {
+			content: '';
+			position: absolute;
+			height: 32px;
+			width: 2px;
+			background-color: $equip-bg;
+			top: 10%;
+			left: -16px;
+		}
+	}
+	.nav__media--768px {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+	}
+	.main-details[open] {
+		summary {
+			position: absolute;
+			top: 100px; 
+			&:before {
+				left: -12%;
+			}
+		}
+	}
+}
+@media (min-width: 1120px) {
+	.main-nav {
+		ul {
+			padding: 0;
+			display: flex;
+			flex-wrap: wrap;
+		}
+	}
+	.nav__media--768px {
+		display: none;
+	}
+	.nav__equipment {
+		position: relative;
+		margin-right: 146px;
+		&:hover {
+			color: $main-hover;
+		}
+		&:before {
+			content: 'Оставить заявку';
+			white-space: nowrap;
+			position: absolute;
+			background-color: $equip-bg-1120;
+			top: 25%;
+			left: -115px;
+			font-family: 'TT Lakes';
+			font-weight: medium;
+		}
+	}
+	.nav__search {
+		position: relative;
+		&:hover {
+			color: $main-hover;
+		}
+		&:before {
+			content: 'Статус ремонта';
+			white-space: nowrap;
+			position: absolute;
+			background-color: $main-nav-bg;
+			top: 25%;
+			left: -115px;
+			font-family: 'TT Lakes';
+			font-weight: medium;
+		}
+	}
+	.info_media--768px {
+		display: none;
+	}
+	.info__subtitle {
+		margin-top: 0px;
+		max-width: 490px;
+		line-height: 20px;
+		position: relative;
+	}
+	.info__flex {
+		.info_media--1120px {
+			display: block;
+		}
+		.info__image {
+			width: 530px;
+			height: 307px;
+		}
+	}
+	.info__slider {
+		overflow: visible;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+	}
+	.main-details[open] {
+		summary {
+			position: absolute;
+			top: 60px; 
+			&:before {
+				left: -12%;
+			}
+		}
+	}
+}
+ 
+@media (min-width: 1440px) {
+	.nav__left {
+		display: none;
+	}
+	.nav__right {
+		position: absolute;
+		top: 30px;
+		right: 30px;
+	}
+	.main-wrapper {
+		padding: 0 16px;
+		h1 {
+			font-size: 28px;
+		}
+	}
+	.header {
+		background: transparent;
+	}
+	.nav__search {
+		position: relative;
+		z-index: 3;
+		&:hover {
+			color: $main-hover;
+		}
+		&:before {
+			content: 'Статус ремонта';
+			white-space: nowrap;
+			position: absolute;
+			background-color: transparent;
+			top: 25%;
+			left: -115px;
+		}
+	}
+	.nav__equipment {
+		position: relative;
+		z-index: 3;
+		margin-right: 146px;
+		&:before {
+			content: 'Оставить заявку';
+			white-space: nowrap;
+			position: absolute;
+			background-color: transparent;
+			top: 25%;
+			left: -115px;
+		}
+	}
+	.main-wrapper {
+		margin-top: -80px;
+	}
+	.container {
+		max-width: 1440px;
+		display: flex;
+		margin: 0 auto;
+	}
+	.wrapper-all {
+		margin-left: auto;
+		margin-right: 0;
+		width: 1120px;
+	}
+	.logo {
+		position: relative;
+		margin-left: 0px;
+		&:after {
+			content: '';
+			background-color: transparent;
+
+		}
+	}
+}

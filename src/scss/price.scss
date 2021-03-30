@@ -1,0 +1,227 @@
+.price {
+	max-width: 1120px;
+    margin: 0 auto;
+}
+
+.price__title {
+	text-transform: uppercase;
+	height: 80px;
+	background-image: linear-gradient(to right, $price-title-lg 0%, $price-title-lg1 70%);
+	display: flex;
+	align-items: center;
+	padding: 0 16px;
+	margin-bottom: 16px;
+	h2 {
+		font-size: 16px;
+		font-weight: normal;
+		color: $h2-color;
+	}
+}
+
+.swiper-container2 {
+    overflow: hidden;
+    margin-left: 16px;
+    padding-bottom: 30px;
+}
+
+.price-wrapper {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    .swiper-slide {
+        width: 260px;
+        height: 200px;
+        background-color: $price-slide-bg;
+        border-radius: 6px;
+    }
+}
+
+.pirce-wrap {
+    margin: 16px;
+    font-size: 14px;
+    p {
+        margin: 0;
+    }
+    .color-gray {
+        color: $active-a-hover;
+    }
+    .price__price, .price__term {
+        margin-top: 16px;
+    }
+    .price__term {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        button {
+            width: 119px;
+            height: 32px;
+            border: none;
+            border-radius: 16px;
+            background-color: $main-color;
+            color: $price-btn-color;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 12px;
+        }
+    }
+    .mtop-7px {
+        margin-top: 7px;
+    }
+}
+
+.price__button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 20px;
+}
+
+.pag2 {
+    position: relative;
+    top: 25px;
+}
+
+.price__list {
+    padding: 0 24px;
+    display: none;
+    .price__list_titles {
+        display: flex;
+        justify-content: space-between;
+        width: 315px;
+        font-size: 14px;
+        color: $price-list-color;
+        p {
+            &:nth-child(2) {
+                margin-left: auto;
+                margin-right: 75px;
+            }
+        }
+    }
+    .price__term_list {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        width: 540px;
+        .price__term_item {
+            padding: 10px 16px 0px 16px;
+            background-color: $price-term;
+            border-radius: 6px;
+        }
+    }
+}
+
+#free {
+margin-right: 27px;
+}
+
+#time {
+    margin-right: 75px;
+}
+
+.item-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $item-wrap-border;
+    p {
+        &:nth-child(3) {
+            margin-right: 40px;
+        }
+        &:nth-child(2) {
+            margin-right: 50px;
+        }
+    }
+}
+
+.price__term_item {
+    button {
+        border: none;
+        border-radius: 16px;
+        background-color: $main-color;
+        color: $price-btn-color;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 12px;
+        cursor: pointer;
+        span {
+            margin-right: 8px;
+        }
+        img {
+            margin-left: 8px;
+        }
+        &:hover {
+            background-image: linear-gradient(120deg, $main-hover, $main-color);
+        }
+    }
+    p {
+        &:nth-child(2) {
+            margin-left: auto;
+        }
+    }
+}
+
+@media (max-width: 442px) {
+    .pirce-wrap {
+        .mtop-7px {
+            margin-top: 3px;
+        }
+    }
+}
+
+@media (min-width: 593px) {
+    .price__title {
+        margin-top: 90px;
+    }
+    .swiper-container2 {
+        display: none;
+    }
+    .price__list {
+        display: block;
+    }
+    .item-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 10px;
+        border-bottom: 1px solid $item-wrap-border;
+        p {
+            &:nth-child(3) {
+                margin-right: 15px;
+            }
+        }
+    }
+    #free {
+        margin-right: 27px;
+        }
+        
+    #time {
+        margin-right: 50px;
+    }
+}
+
+@media (min-width: 768px) {
+    .price__title {
+        height: 56px;
+        margin-top: 90px;
+    }
+    .price__list {
+        .price__term_list {
+            width: 720px;
+        }
+        .price__list_titles {
+            width: 495px;
+        }
+    }
+}
+
+@media (min-width: 1120px) {
+    .price__list {
+        .price__term_list {
+            width: 1056px;
+        }
+        .price__list_titles {
+            width: 829px;
+        }
+    }
+}
