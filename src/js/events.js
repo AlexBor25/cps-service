@@ -4,6 +4,8 @@ const btnOpenMenu = document.querySelector('.nav__menu'),
              blur = document.querySelector('.blur'),
           btnCall = document.querySelector('.footer__icon--call'),
              call = document.querySelector('.call'),
+         infoText = document.querySelector('.info__text'),
+         readMore = document.querySelector('.read-more'),
         closeCall = document.querySelector('.call_close'),
        closePhone = document.querySelector('.phone_close'),
             phone = document.querySelector('.phone'),
@@ -15,6 +17,16 @@ btnOpenMenu.addEventListener('click', () => {
     blur.style = 'z-index: 7; background: #fff; opacity: 0.9;';
     body.style = 'overflow: hidden';
 });
+
+readMore.addEventListener('click', () => {
+    if(readMore.innerText === 'Читать далее'){
+        infoText.style = '-webkit-line-clamp: 15;';
+        readMore.innerText = 'Скрыть';
+    } else {
+        infoText.style = '-webkit-line-clamp: 5;';
+        readMore.innerText = 'Читать далее';
+    }
+}); 
 
 closeMenu.addEventListener('click', () => {
     menu.classList.remove('show');
