@@ -1020,8 +1020,8 @@ body {
   margin: 0;
   padding: 0;
   background-color: #F8F8F8;
-  color: #1B1C21;
-  font-family: 'TT Lakes';
+  color: #1b1c21;
+  font-family: "TT Lakes";
   min-height: 100vh; }
 
 * {
@@ -1084,14 +1084,14 @@ body {
   cursor: pointer;
   border: none;
   padding: 0;
-  transition: .3s; }
+  transition: 0.3s; }
   .button:hover {
     background-color: #ac0033; }
 
 .logo {
   position: relative; }
   .logo:after {
-    content: '';
+    content: "";
     position: absolute;
     height: 32px;
     width: 2px;
@@ -1137,9 +1137,10 @@ body {
   display: none; }
 
 .info h1 {
-  position: relative; }
+  position: relative;
+  margin-bottom: 0; }
   .info h1::before {
-    content: '';
+    content: "";
     position: absolute;
     top: -5px;
     left: -16px;
@@ -1148,6 +1149,52 @@ body {
     background: #41F6D6;
     border-radius: 8px; }
 
+.info__wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.info__promo {
+  margin-bottom: 16px; }
+
+.info__description {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  color: #1b1c21; }
+
+.info__text {
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden; }
+
+.read-more {
+  margin-top: 10px;
+  padding-left: 16px;
+  position: relative;
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  color: #1b1c21;
+  font-family: "TTLakes"; }
+
+.read-more::before {
+  position: absolute;
+  content: "";
+  background-image: url(./static/arrows-down.png);
+  background-position: center;
+  background-size: cover;
+  width: 8px;
+  height: 10px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto 0; }
+
 .info__slider {
   overflow: scroll;
   overflow-y: hidden;
@@ -1155,18 +1202,6 @@ body {
   align-items: center;
   font-size: 18px;
   font-weight: medium; }
-
-.info__subtitle {
-  margin-top: 24px;
-  font-size: 14px; }
-
-.info__image {
-  display: block;
-  margin-left: -16px; }
-
-.info__flex .info__image {
-  width: 320px;
-  height: 190px; }
 
 .main-nav ul {
   padding: 0;
@@ -1181,7 +1216,7 @@ body {
     white-space: nowrap; }
     .main-nav ul li a {
       text-decoration: none;
-      color: #7E7E82;
+      color: #7e7e82;
       font-size: 16px; }
 
 .main-nav ul li:hover {
@@ -1194,94 +1229,25 @@ body {
   border-radius: 6px;
   background-color: #fff; }
 
-.main-details {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  position: relative; }
-  .main-details summary {
-    margin-left: 10px;
-    border: none;
-    position: relative; }
-    .main-details summary::-webkit-details-marker {
-      display: none; }
-    .main-details summary::after {
-      content: "Читать далее";
-      font-weight: bold;
-      font-size: 16px; }
-    .main-details summary:before {
-      content: '';
-      position: absolute;
-      top: 20%;
-      display: inline-block;
-      width: 20px;
-      height: 20px;
-      transition: .3s; }
-    .main-details summary:hover {
-      cursor: pointer; }
-    .main-details summary span {
-      font-size: 16px;
-      font-weight: bold; }
-
-.main-details[open] summary::after {
-  content: "Скрыть";
-  font-weight: bold;
-  font-size: 16px; }
-
-.main-details[open] summary:before {
-  content: '';
-  position: absolute;
-  top: -30%;
-  left: -4%;
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  transform: rotate(180deg); }
-
-.info_show--block {
-  display: none; }
-
-@media (min-width: 320px) {
-  .main-details[open] summary {
-    position: absolute;
-    top: 50px; }
-    .main-details[open] summary:before {
-      left: -12%; }
-    .main-details[open] summary::-webkit-details-marker {
-      display: none; }
-  .main-details p {
-    margin-bottom: 50px; } }
-
-@media (min-width: 572px) {
-  .main-details[open] summary {
-    position: absolute;
-    top: 30px; }
-    .main-details[open] summary:before {
-      left: -12%; } }
-
 @media (min-width: 768px) {
   .info__flex {
-    margin-top: 30px;
     display: flex;
     justify-content: space-between; }
-    .info__flex .info__image {
-      width: 360px;
-      height: 208px; }
-  .info__subtitle {
-    margin-top: 0px;
-    max-width: 312px;
-    line-height: 20px; }
-  .info_media--768px {
-    display: block; }
-    .info_media--768px span:not(:last-child) {
-      display: block; }
-    .info_media--768px span:nth-child(2) {
-      margin-top: 25px; }
-  .info_media--320px {
-    display: none; }
+  .info__wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+  .info__promo {
+    width: 312px; }
+  .info__text {
+    -webkit-line-clamp: 8; }
+  .info__img {
+    width: 360px;
+    border-radius: 5px; }
   .nav__equipment {
     position: relative; }
     .nav__equipment:before {
-      content: '';
+      content: "";
       position: absolute;
       height: 32px;
       width: 2px;
@@ -1289,12 +1255,7 @@ body {
       top: 10%;
       left: -16px; }
   .nav__media--768px {
-    display: flex; }
-  .main-details[open] summary {
-    position: absolute;
-    top: 100px; }
-    .main-details[open] summary:before {
-      left: -12%; } }
+    display: flex; } }
 
 @media (min-width: 1120px) {
   .main-nav ul {
@@ -1309,50 +1270,41 @@ body {
     .nav__equipment:hover {
       color: #ac0033; }
     .nav__equipment:before {
-      content: 'Оставить заявку';
+      content: "Оставить заявку";
       white-space: nowrap;
       position: absolute;
       background-color: #fff;
       top: 25%;
       left: -115px;
-      font-family: 'TT Lakes';
+      font-family: "TT Lakes";
       font-weight: medium; }
   .nav__search {
     position: relative; }
     .nav__search:hover {
       color: #ac0033; }
     .nav__search:before {
-      content: 'Статус ремонта';
+      content: "Статус ремонта";
       white-space: nowrap;
       position: absolute;
       background-color: #fff;
       top: 25%;
       left: -115px;
-      font-family: 'TT Lakes';
+      font-family: "TT Lakes";
       font-weight: medium; }
-  .info_media--768px {
-    display: none; }
-  .info__subtitle {
-    margin-top: 0px;
-    max-width: 490px;
-    line-height: 20px;
-    position: relative; }
-  .info__flex .info_media--1120px {
-    display: block; }
-  .info__flex .info__image {
-    width: 530px;
-    height: 307px; }
   .info__slider {
     overflow: visible;
     display: flex;
     flex-wrap: wrap; }
-  .main-details[open] summary {
-    position: absolute;
-    top: 60px; }
-    .main-details[open] summary:before {
-      left: -12%; } }
+  .info__promo {
+    width: 490px; }
+  .info__text {
+    -webkit-line-clamp: 20; }
+  .info__img {
+    width: 531px; }
+  .read-more {
+    display: none; } }
 
-@media (min-width: 1440px) {
+@media (min-width: 1120px) and (min-width: 1440px) {
   .nav__left {
     display: none; }
   .nav__right {
@@ -1371,7 +1323,7 @@ body {
     .nav__search:hover {
       color: #ac0033; }
     .nav__search:before {
-      content: 'Статус ремонта';
+      content: "Статус ремонта";
       white-space: nowrap;
       position: absolute;
       background-color: transparent;
@@ -1382,7 +1334,7 @@ body {
     z-index: 3;
     margin-right: 146px; }
     .nav__equipment:before {
-      content: 'Оставить заявку';
+      content: "Оставить заявку";
       white-space: nowrap;
       position: absolute;
       background-color: transparent;
@@ -1402,7 +1354,7 @@ body {
     position: relative;
     margin-left: 0px; }
     .logo:after {
-      content: '';
+      content: "";
       background-color: transparent; } }
 
 
