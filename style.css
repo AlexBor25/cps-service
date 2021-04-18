@@ -480,71 +480,13 @@ a {
     font-weight: normal;
     color: #7E7E82; }
 
-.brands__details {
-  display: none;
-  position: relative;
-  margin-top: 30px; }
-  .brands__details summary {
-    outline: none;
-    cursor: pointer;
-    display: block;
-    margin-top: -16px;
-    margin-bottom: 30px; }
-    .brands__details summary:hover {
-      color: #000;
-      opacity: 0.7; }
-    .brands__details summary::-webkit-details-marker {
-      display: none; }
-    .brands__details summary::after {
-      top: 0px;
-      position: absolute;
-      left: 45px;
-      content: "Показать все";
-      font-weight: bold;
-      font-size: 16px; }
-    .brands__details summary:before {
-      content: '';
-      position: absolute;
-      top: 5px;
-      display: inline-block;
-      width: 20px;
-      height: 20px;
-      background: url(./static/arrows-down.png) no-repeat;
-      transition: .3s; }
-
-.brands__details_wrapper {
-  display: flex;
-  gap: 1em;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  padding: 0; }
-
-.brands__details[open] summary::after {
-  position: absolute;
-  content: "Скрыть";
-  font-weight: bold;
-  font-size: 16px;
-  left: 45px;
-  top: 20px; }
-
-.brands__details[open] summary:before {
-  content: '';
-  position: absolute;
-  top: 40px;
-  left: -10px;
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  background: url(./static/arrows-down.png) no-repeat;
-  transform: rotate(180deg); }
-
 @media (min-width: 593px) {
   .brands-list {
     display: flex;
     flex-wrap: wrap;
     gap: 1em; }
   .brands-container {
-    height: 100%;
+    height: 160px;
     padding: 0 24px;
     margin-left: 0px; }
   .brands__title {
@@ -560,39 +502,11 @@ a {
     display: block;
     padding: 0 24px; }
   .hidden-768px {
-    display: none; }
-  .brands__details[open] summary::after {
-    margin-top: 250px; }
-  .brands__details[open] summary:before {
-    content: '';
-    position: absolute;
-    z-index: 20;
-    top: 265px;
-    left: 15px;
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background: url(./static/arrows-down.png) no-repeat;
-    transform: rotate(180deg); }
-  .brands__details[open] .brands__details_wrapper {
-    margin-top: 16px; } }
+    display: none; } }
 
 @media (min-width: 768px) {
   .h {
     display: none; }
-  .brands__details[open] summary::after {
-    margin-top: 170px; }
-  .brands__details[open] summary:before {
-    content: '';
-    position: absolute;
-    z-index: 20;
-    top: 185px;
-    left: 15px;
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background: url(./static/arrows-down.png) no-repeat;
-    transform: rotate(180deg); }
   .brands-list-card {
     width: 224px; }
   .brands-list, .brands__details_wrapper {
@@ -617,21 +531,7 @@ a {
     height: 100px;
     gap: 1em 2em;
     padding: 0;
-    width: 100%; }
-  .brands__details[open] summary::after {
-    margin-top: 85px;
-    z-index: 10; }
-  .brands__details[open] summary:before {
-    content: '';
-    position: absolute;
-    z-index: 10;
-    top: 101px;
-    left: 15px;
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background: url(./static/arrows-down.png) no-repeat;
-    transform: rotate(180deg); } }
+    width: 100%; } }
 
 .repairs {
   max-width: 1120px;
@@ -765,6 +665,7 @@ a {
   .hid-593px {
     display: none; }
   .repairs__container {
+    height: 160px;
     padding: 0 24px; }
   .repairs__details {
     display: block; }
@@ -1025,6 +926,7 @@ body {
   min-height: 100vh; }
 
 * {
+  outline-color: rgba(241, 104, 161, 0.5);
   box-sizing: inherit; }
   *::before {
     box-sizing: inherit; }
@@ -1172,8 +1074,15 @@ body {
   -webkit-box-orient: vertical;
   overflow: hidden; }
 
+.read-more__wrap {
+  margin-top: 10px; }
+
+.read-more__wrap2 {
+  display: none;
+  margin-left: 24px;
+  margin-top: 24px; }
+
 .read-more {
-  margin-top: 10px;
   padding-left: 16px;
   position: relative;
   border: none;
@@ -1233,6 +1142,8 @@ body {
   .info__flex {
     display: flex;
     justify-content: space-between; }
+  .read-more__wrap2 {
+    display: block; }
   .info__wrap {
     display: flex;
     flex-direction: row;
@@ -1301,7 +1212,7 @@ body {
     -webkit-line-clamp: 20; }
   .info__img {
     width: 531px; }
-  .read-more {
+  .read-more__wrap {
     display: none; } }
 
 @media (min-width: 1120px) and (min-width: 1440px) {
