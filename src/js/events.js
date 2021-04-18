@@ -6,6 +6,10 @@ const btnOpenMenu = document.querySelector('.nav__menu'),
              call = document.querySelector('.call'),
          infoText = document.querySelector('.info__text'),
          readMore = document.querySelector('.read-more'),
+         showBtn1 = document.querySelector('#showBtn1'),
+         showBtn2 = document.querySelector('#showBtn2'),
+  brandsContainer = document.querySelector('.brands-container'),
+ repairsContainer = document.querySelector('.repairs__container'),
         closeCall = document.querySelector('.call_close'),
        closePhone = document.querySelector('.phone_close'),
             phone = document.querySelector('.phone'),
@@ -27,6 +31,26 @@ readMore.addEventListener('click', () => {
         readMore.innerText = 'Читать далее';
     }
 }); 
+
+showBtn1.addEventListener('click', () => {
+    if(showBtn1.innerText === 'Показать все'){
+        brandsContainer.style = 'height: 260px; transition: .5s;';
+        showBtn1.innerText = 'Скрыть';
+    } else {
+        brandsContainer.style = 'height: 160px; transition: .5s;';
+        showBtn1.innerText = 'Показать все';
+    }
+});
+
+showBtn2.addEventListener('click', () => {
+    if(showBtn2.innerText === 'Показать все'){
+        repairsContainer.style = 'height: 350px; transition: .5s';
+        showBtn2.innerText = 'Скрыть';
+    } else {
+        repairsContainer.style = 'height: 160px; transition: .5s';
+        showBtn2.innerText = 'Показать все';
+    }
+});
 
 closeMenu.addEventListener('click', () => {
     menu.classList.remove('show');

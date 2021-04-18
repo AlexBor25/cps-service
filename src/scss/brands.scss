@@ -64,77 +64,6 @@
 		color: $h2-color;
 	}
 }
-.brands__details {
-	display: none;
-	position: relative;
-	margin-top: 30px;
-	summary {
-		outline: none;
-		cursor: pointer;
-		display: block;
-		margin-top: -16px;
-		margin-bottom: 30px;
-		&:hover {
-			color: $brands-summary-hover;
-			opacity: 0.7;
-		}
-		&::-webkit-details-marker {
-			display: none;
-		}
-		&::after {
-			top: 0px;
-			position: absolute;
-			left: 45px;
-			content: "Показать все";
-			font-weight: bold;
-			font-size: 16px;
-		}
-		&:before {
-			content: '';
-			position: absolute;
-			top: 5px;
-			display: inline-block;
-			width: 20px;
-			height: 20px;
-			background: url('./../img/arrows-down.png') no-repeat;
-			transition: .3s;
-		}
-	}
-}
-.brands__details_wrapper {
-	display: flex;
-	gap: 1em;
-	align-items: flex-start;
-	flex-wrap: wrap;
-	padding: 0;
-}
-.brands__details[open] {
-	summary {
-		&::after {
-			position: absolute;
-			content: "Скрыть";
-			font-weight: bold;
-			font-size: 16px;
-			left: 45px;
-			top: 20px;
-		}
-		&:before {
-			content: '';
-			position: absolute;
-			top: 40px;
-			left: -10px;
-			display: inline-block;
-			width: 20px;
-			height: 20px;
-			background: url('./../img/arrows-down.png') no-repeat;
-			-moz-transform: rotate(180deg);
-			-ms-transform: rotate(180deg);
-			-webkit-transform: rotate(180deg);
-			-o-transform: rotate(180deg);
-			transform: rotate(180deg);
-		}
-	}
-}
 
 @media (min-width: 593px) {
 	.brands-list {
@@ -143,7 +72,7 @@
 		gap: 1em;
 	}
 	.brands-container {
-		height: 100%;
+		height: 160px;
 		padding: 0 24px;
 		margin-left: 0px;
 	}
@@ -167,59 +96,10 @@
 	.hidden-768px {
 		display: none;
 	}
-	.brands__details[open] {
-		summary {
-			&::after {
-				margin-top: 250px;
-			}
-			&:before {
-				content: '';
-				position: absolute;
-				z-index: 20;
-				top: 265px;
-				left: 15px;
-				display: inline-block;
-				width: 20px;
-				height: 20px;
-				background: url('./../img/arrows-down.png') no-repeat;
-				-moz-transform: rotate(180deg);
-				-ms-transform: rotate(180deg);
-				-webkit-transform: rotate(180deg);
-				-o-transform: rotate(180deg);
-				transform: rotate(180deg);
-			}
-		}
-		.brands__details_wrapper {
-			margin-top: 16px;
-		}
-	}
 }
 @media (min-width: 768px) {
 	.h {
 		display: none;
-	}
-	.brands__details[open] {
-		summary {
-			&::after {
-				margin-top: 170px;
-			}
-			&:before {
-				content: '';
-				position: absolute;	
-				z-index: 20;
-				top: 185px;
-				left: 15px;
-				display: inline-block;
-				width: 20px;
-				height: 20px;
-				background: url('./../img/arrows-down.png') no-repeat;
-				-moz-transform: rotate(180deg);
-				-ms-transform: rotate(180deg);
-				-webkit-transform: rotate(180deg);
-				-o-transform: rotate(180deg);
-				transform: rotate(180deg);
-			}
-		}
 	}
 	.brands-list-card {
 		width: 224px;
@@ -253,30 +133,6 @@
 		gap: 1em 2em;
 		padding: 0;
 		width: 100%;
-	}
-	.brands__details[open] {
-		summary {
-			&::after {
-				margin-top: 85px;
-				z-index: 10;
-			}
-			&:before {
-				content: '';
-				position: absolute;
-				z-index: 10;
-				top: 101px;
-				left: 15px;
-				display: inline-block;
-				width: 20px;
-				height: 20px;
-				background: url('./../img/arrows-down.png') no-repeat;
-				-moz-transform: rotate(180deg);
-				-ms-transform: rotate(180deg);
-				-webkit-transform: rotate(180deg);
-				-o-transform: rotate(180deg);
-				transform: rotate(180deg);
-			}
-		}
 	}
 }
 
